@@ -17,6 +17,12 @@
 		8C4D9F641C1FDE4200106EC1 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4D9F631C1FDE4200106EC1 /* MainTabBarController.m */; };
 		8C4D9F681C1FDE8500106EC1 /* DataBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4D9F671C1FDE8500106EC1 /* DataBaseViewController.m */; };
 		8C4D9F6C1C1FDF3C00106EC1 /* LocaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4D9F6B1C1FDF3C00106EC1 /* LocaleViewController.m */; };
+		8CC669361C205895008BBF35 /* ShoppingCart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CC669341C205895008BBF35 /* ShoppingCart.xcdatamodeld */; };
+		8CC6693A1C205985008BBF35 /* ShoppingCartDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC669391C205985008BBF35 /* ShoppingCartDetail.m */; };
+		8CC6693D1C205985008BBF35 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6693C1C205985008BBF35 /* Customer.m */; };
+		8CC669401C205985008BBF35 /* ShoppingCartMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6693F1C205985008BBF35 /* ShoppingCartMaster.m */; };
+		8CC669431C2059AF008BBF35 /* DataBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC669421C2059AF008BBF35 /* DataBaseViewController.xib */; };
+		8CC669461C205AD1008BBF35 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC669451C205AD1008BBF35 /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,16 @@
 		8C4D9F671C1FDE8500106EC1 /* DataBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseViewController.m; sourceTree = "<group>"; };
 		8C4D9F6A1C1FDF3C00106EC1 /* LocaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocaleViewController.h; sourceTree = "<group>"; };
 		8C4D9F6B1C1FDF3C00106EC1 /* LocaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocaleViewController.m; sourceTree = "<group>"; };
+		8CC669351C205895008BBF35 /* ShoppingCart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingCart.xcdatamodel; sourceTree = "<group>"; };
+		8CC669381C205985008BBF35 /* ShoppingCartDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartDetail.h; sourceTree = "<group>"; };
+		8CC669391C205985008BBF35 /* ShoppingCartDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartDetail.m; sourceTree = "<group>"; };
+		8CC6693B1C205985008BBF35 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		8CC6693C1C205985008BBF35 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		8CC6693E1C205985008BBF35 /* ShoppingCartMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartMaster.h; sourceTree = "<group>"; };
+		8CC6693F1C205985008BBF35 /* ShoppingCartMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartMaster.m; sourceTree = "<group>"; };
+		8CC669421C2059AF008BBF35 /* DataBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataBaseViewController.xib; sourceTree = "<group>"; };
+		8CC669441C205AD1008BBF35 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		8CC669451C205AD1008BBF35 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +151,13 @@
 		8C4D9F651C1FDE6E00106EC1 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				8CC669411C20598D008BBF35 /* resources */,
+				8CC669371C205973008BBF35 /* Model */,
 				8C4D9F661C1FDE8500106EC1 /* DataBaseViewController.h */,
 				8C4D9F671C1FDE8500106EC1 /* DataBaseViewController.m */,
+				8CC669421C2059AF008BBF35 /* DataBaseViewController.xib */,
+				8CC669441C205AD1008BBF35 /* CoreDataManager.h */,
+				8CC669451C205AD1008BBF35 /* CoreDataManager.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -148,6 +169,27 @@
 				8C4D9F6B1C1FDF3C00106EC1 /* LocaleViewController.m */,
 			);
 			path = Locale;
+			sourceTree = "<group>";
+		};
+		8CC669371C205973008BBF35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CC6693E1C205985008BBF35 /* ShoppingCartMaster.h */,
+				8CC6693F1C205985008BBF35 /* ShoppingCartMaster.m */,
+				8CC6693B1C205985008BBF35 /* Customer.h */,
+				8CC6693C1C205985008BBF35 /* Customer.m */,
+				8CC669381C205985008BBF35 /* ShoppingCartDetail.h */,
+				8CC669391C205985008BBF35 /* ShoppingCartDetail.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8CC669411C20598D008BBF35 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CC669341C205895008BBF35 /* ShoppingCart.xcdatamodeld */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +275,7 @@
 				8C4D9F481C1FDDF200106EC1 /* Main.storyboard in Resources */,
 				8C4D9F4D1C1FDDF200106EC1 /* LaunchScreen.xib in Resources */,
 				8C4D9F4A1C1FDDF200106EC1 /* Images.xcassets in Resources */,
+				8CC669431C2059AF008BBF35 /* DataBaseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,11 +294,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4D9F681C1FDE8500106EC1 /* DataBaseViewController.m in Sources */,
+				8CC6693D1C205985008BBF35 /* Customer.m in Sources */,
 				8C4D9F451C1FDDF200106EC1 /* ViewController.m in Sources */,
 				8C4D9F421C1FDDF200106EC1 /* AppDelegate.m in Sources */,
 				8C4D9F641C1FDE4200106EC1 /* MainTabBarController.m in Sources */,
+				8CC669461C205AD1008BBF35 /* CoreDataManager.m in Sources */,
+				8CC669401C205985008BBF35 /* ShoppingCartMaster.m in Sources */,
+				8CC6693A1C205985008BBF35 /* ShoppingCartDetail.m in Sources */,
 				8C4D9F6C1C1FDF3C00106EC1 /* LocaleViewController.m in Sources */,
 				8C4D9F3F1C1FDDF200106EC1 /* main.m in Sources */,
+				8CC669361C205895008BBF35 /* ShoppingCart.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +498,7 @@
 				8C4D9F5E1C1FDDF200106EC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C4D9F5F1C1FDDF200106EC1 /* Build configuration list for PBXNativeTarget "WeiProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -458,8 +507,22 @@
 				8C4D9F611C1FDDF200106EC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8CC669341C205895008BBF35 /* ShoppingCart.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8CC669351C205895008BBF35 /* ShoppingCart.xcdatamodel */,
+			);
+			currentVersion = 8CC669351C205895008BBF35 /* ShoppingCart.xcdatamodel */;
+			path = ShoppingCart.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8C4D9F311C1FDDF200106EC1 /* Project object */;
 }

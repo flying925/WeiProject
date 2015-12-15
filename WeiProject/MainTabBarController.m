@@ -21,10 +21,12 @@
 -(void)createViewControllers
 {
     NSArray *array=@[@"DataBaseViewController",@"LocaleViewController"];
+    NSArray *titles=@[@"多表数据库",@"国际化"];
     NSMutableArray *viewControllers=[[NSMutableArray alloc]init];
     for(int i=0;i<array.count;i++){
         Class class=NSClassFromString(array[i]);
         UIViewController *vc=[[class alloc]init];
+        vc.title=titles[i];
         [viewControllers addObject:vc];
     }
     self.viewControllers=viewControllers;

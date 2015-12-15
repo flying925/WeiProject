@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Customer" representedClassName="Customer" syncable="YES">
+        <attribute name="customerID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="customerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingCartMaster" inverseName="customer" inverseEntity="ShoppingCartMaster" syncable="YES"/>
+    </entity>
+    <entity name="ShoppingCartDetail" representedClassName="ShoppingCartDetail" syncable="YES">
+        <attribute name="cartID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="productID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="master" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingCartMaster" inverseName="detail" inverseEntity="ShoppingCartMaster" syncable="YES"/>
+    </entity>
+    <entity name="ShoppingCartMaster" representedClassName="ShoppingCartMaster" syncable="YES">
+        <attribute name="cartID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="customerID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="cart" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="detail" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShoppingCartDetail" inverseName="master" inverseEntity="ShoppingCartDetail" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Customer" positionX="-90" positionY="-18" width="128" height="118"/>
+        <element name="ShoppingCartMaster" positionX="79" positionY="-18" width="128" height="103"/>
+        <element name="ShoppingCartDetail" positionX="90" positionY="102" width="128" height="118"/>
+    </elements>
+</model>

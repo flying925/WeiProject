@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DataBaseViewController : UIViewController
+- (IBAction)btnAdd:(id)sender;
+- (IBAction)btnView:(id)sender;
+- (IBAction)btnRemove:(id)sender;
+- (IBAction)btnModify:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *inputField;
 
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>61E70D28-211F-4C91-9FBC-951FB87A4D81</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WeiProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BB86FE6104EA1BEEE99B80969E42D2B20B430968</key>
+		<string>github.com:flying925/WeiProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WeiProject.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BB86FE6104EA1BEEE99B80969E42D2B20B430968</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:flying925/WeiProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BB86FE6104EA1BEEE99B80969E42D2B20B430968</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BB86FE6104EA1BEEE99B80969E42D2B20B430968</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WeiProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>

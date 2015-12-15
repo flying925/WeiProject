@@ -7,7 +7,7 @@
 //
 
 #import "DataBaseViewController.h"
-
+#import "CoreDataManager.h"
 @interface DataBaseViewController ()
 
 @end
@@ -34,4 +34,21 @@
 }
 */
 
+- (IBAction)btnAdd:(id)sender {
+    [[CoreDataManager sharedManager] insertDataIntoShoppingCartDBWithDictionary:nil];
+}
+
+- (IBAction)btnView:(id)sender {
+    [[CoreDataManager sharedManager]displayShoppingCart];
+}
+
+- (IBAction)btnRemove:(id)sender {
+    NSString *cid=self.inputField.text;
+    [[CoreDataManager sharedManager]deleteEntityByID:[cid intValue]];
+}
+
+- (IBAction)btnModify:(id)sender {
+    NSDictionary *dict=@{@"customerID":[NSNumber numberWithInt:[self.inputField.text intValue]],@"customerName":@"qianfeng",@"userName":@"qianfeng",@"password":@"123456"};
+    [[CoreDataManager sharedManager]modifyEntityWithDictionary:dict];
+}
 @end
