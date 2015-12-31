@@ -1,5 +1,5 @@
 //
-//  MQLResumeManager.h
+//  QFResumeManager.h
 //  URLSessionTest
 //
 //  Created by weikejun on 15/12/27.

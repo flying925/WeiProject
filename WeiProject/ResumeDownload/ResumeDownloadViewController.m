@@ -7,9 +7,13 @@
 //
 
 #import "ResumeDownloadViewController.h"
+#import "QFResumeManager.h"
 
 @interface ResumeDownloadViewController ()
-
+{
+    QFResumeManager *_manager;
+    NSString *_targetPath;
+}
 @end
 
 @implementation ResumeDownloadViewController
@@ -34,4 +38,29 @@
 }
 */
 
+- (IBAction)btnDownload:(id)sender {
+    if(_manager){
+        [self btnPause:nil];
+    }
+    NSString *docDir=[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    _targetPath=[docDir stringByAppendingPathComponent:@"myPic"];
+    NSString *path=@"http://p1.pichost.me/i/40/1639665.png";
+    _manager=[QFResumeManager resumeManagerWithURL:[NSURL URLWithString:path] targetPath:_targetPath success:^{
+        NSLog(@"success");
+        self.imageView.image=[UIImage imageWithContentsOfFile:_targetPath];
+    } failure:^(NSError *error) {
+        NSLog(@"error:%@",error.localizedDescription);
+    } progress:^(long long totalReceivedContentLength, long long totalContentLength) {
+        float percent=1.0*totalReceivedContentLength/totalContentLength;
+        NSString *str=[NSString stringWithFormat:@"%.f",percent*100];
+        self.progressView.progress=percent;
+        self.showLabel.text=[NSString stringWithFormat:@"已下载%@%%",str];
+    }];
+    [_manager start];
+}
+
+- (IBAction)btnPause:(id)sender {
+    [_manager cancel];
+    _manager=nil;
+}
 @end

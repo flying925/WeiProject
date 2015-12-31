@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ResumeDownloadViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIProgressView *progressView;
+@property (strong, nonatomic) IBOutlet UILabel *showLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)btnDownload:(id)sender;
+- (IBAction)btnPause:(id)sender;
 
 @end

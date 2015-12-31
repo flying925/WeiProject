@@ -20,14 +20,20 @@
 }
 -(void)createViewControllers
 {
-    NSArray *array=@[@"DataBaseViewController",@"LocaleViewController"];
-    NSArray *titles=@[@"多表数据库",@"国际化"];
+    NSArray *array=@[@"RootViewController",@"DataBaseViewController",@"LocaleViewController",@"ResumeDownloadViewController"];
+    NSArray *titles=@[@"首页",@"多表数据库",@"国际化",@"断点续传"];
     NSMutableArray *viewControllers=[[NSMutableArray alloc]init];
     for(int i=0;i<array.count;i++){
+        
         Class class=NSClassFromString(array[i]);
         UIViewController *vc=[[class alloc]init];
         vc.title=titles[i];
+        if(i==0){
+            UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
+            [viewControllers addObject:nav];
+        }else{
         [viewControllers addObject:vc];
+        }
     }
     self.viewControllers=viewControllers;
 }
